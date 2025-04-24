@@ -52,7 +52,7 @@
             }
         }
         
-        function autoprocess( $applet, $data, &$anim_ext, &$print_ok, &$print_error_prefix, &$response_mimetype, &$error )
+        function autoprocess( $applet, $data, $anim_ext, $print_ok, $print_error_prefix, $response_mimetype, $error )
         {
             $response_mimetype = 'text/plain';
             switch( strtolower( $applet ) )
@@ -95,19 +95,19 @@
             }
         }
         
-        function shipainter( $data, &$error )
+        function shipainter( $data, $error )
         {
             // Same data format
             return $this->_shibbs( $data, $error, 'S' );
         }
         
-        function paintbbs( $data, &$error )
+        function paintbbs( $data, $error )
         {
             // Same data format
             return $this->_shibbs( $data, $error, 'P' );
         }
         
-        function _shibbs( $data, &$error, $data_string )
+        function _shibbs( $data, $error, $data_string )
         {
             $error = '';
             
@@ -218,7 +218,7 @@
             }
         }
         
-        function oekakibbs( $data, &$error )
+        function oekakibbs( $data, $error )
         {
             $error = '';
             
